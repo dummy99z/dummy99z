@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksdum-8ab7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksdum-8ab7"
+  template:
+    metadata:
+      labels:
+        app: "aksdum-8ab7"
+    spec:
+      containers:
+        - name: "aksdum-8ab7"
+          image: "craksdum.azurecr.io/aksdum"
+          ports:
+          - containerPort: 80
